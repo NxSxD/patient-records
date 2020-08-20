@@ -1,0 +1,17 @@
+[
+  {
+    "appointment_time": "2020-08-20T17:30:00-0400",
+    "doctor": "O'Hara",
+    "location": { "lat": 0.0, "lng": 0.0 }
+  },
+  {
+    "appointment_time": "2020-08-21T17:30:00-0400",
+    "doctor": "Abela",
+    "location": { "lat": 0.0, "lng": 0.0 }
+  },
+  {
+    "appointment_time": "2020-08-22T17:30:00-0400",
+    "doctor": "Kennedy",
+    "location": { "lat": 0.0, "lng": 0.0 }
+  }
+]

@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --primary-color: #0075f6;
+  --primary-alt-color: #0075f680;
+  --text: #1d1919;
+}

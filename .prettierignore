@@ -1,0 +1,11 @@
+# Images and icons
+*.png
+*.jpeg
+*.ico
+
+# node and yarn
+/node_modules/
+*.lock
+
+# git
+.gitignore
