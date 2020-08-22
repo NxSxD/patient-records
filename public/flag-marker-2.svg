@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="64" height="64">
+  <title>Flag</title>
+  <desc>A flat styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M9 35.165c13.346-6.659 32.3 7.591 48-.146L40.99 21 57 5.019c-16.291 7.317-34.654-6.842-48-.184z"
+  fill="#f27e7c"></path>
+  <path data-name="layer1" d="M9 63.186a1 1 0 0 1-1-1V4a1 1 0 0 1 2 0v58.186a1 1 0 0 1-1 1z"
+  fill="#7b8baf"></path>
+</svg>

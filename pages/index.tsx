@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { withApollo } from "../apollo";
-import { Formik, FormikHelpers } from "formik";
+import { Formik, FormikHelpers, Form } from "formik";
 import { Field } from "../components";
-import { ButtonPrimary, Loading } from "../primitives";
+import { ButtonPrimary, Spinner, Mask } from "../primitives";
 import { LOGIN } from "../login/queries";
 import { useMutation } from "@apollo/react-hooks";
 import { LoginVariables, AuthResponse } from "../login";
@@ -57,14 +57,14 @@ function IndexPage(props: AuthProps) {
               <Field label="Email" name="email" type="email" />
               <Field label="Password" name="password" type="password" />
               <ButtonPrimary type="submit" disabled={loading}>
-                {loading ? <Loading /> : "Log In"}
+                {loading ? <Spinner /> : "Log In"}
               </ButtonPrimary>
             </Form>
           )}
         </Formik>
       </LoginContainer>
       <HeroContainer>
-        <Mask>
+        <ImageMask>
           <ArtistCredit>
             Photo by{" "}
             <a href="https://unsplash.com/@safesolvent?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
@@ -75,7 +75,7 @@ function IndexPage(props: AuthProps) {
               Unsplash
             </a>
           </ArtistCredit>
-        </Mask>
+        </ImageMask>
       </HeroContainer>
     </Container>
   );
@@ -95,11 +95,6 @@ const LoginContainer = styled.div`
   align-items: center;
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
 const FormHeading = styled.h2`
   font-size: 1.1rem;
   color: #666;
@@ -115,11 +110,7 @@ const HeroContainer = styled.div`
   display: flex;
 `;
 
-const Mask = styled.div`
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+const ImageMask = styled(Mask)`
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 2vh;
