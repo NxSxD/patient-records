@@ -12,7 +12,9 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({ title }) => {
   return (
     <Nav>
       <NavPageContainer>
-        <Title>{title ? title : "My Patient Records"}</Title>
+        <Link href="/welcome">
+          <Title>{title ? title : "My Patient Records"}</Title>
+        </Link>
         <LinksContainer>
           {ROUTES.map((link) => (
             <Link key={link.id} href={link.route}>
@@ -45,6 +47,9 @@ const CenteredContainer = styled.div`
 
 const Title = styled(CenteredContainer)`
   color: var(--text);
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const LinksContainer = styled.div`

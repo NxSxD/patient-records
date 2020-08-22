@@ -4,8 +4,8 @@ import { ROUTES } from "../routes";
 import { ButtonLink, PageContainer } from "../primitives";
 import Link from "next/link";
 
-const myAppointments = ROUTES.find((r) => r.id == "my_appointments");
-const myMedications = ROUTES.find((r) => r.id == "my_medications");
+const myAppointments = ROUTES.find((r) => r.id == "appointments");
+const myMedications = ROUTES.find((r) => r.id == "medications");
 
 export const WelcomeDisplay = () => {
   return (

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink"
+width="64" height="64">
+  <title>Waving Flag</title>
+  <desc>A flat styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M55 4.031c-14.711 8.426-34.5.521-46 6.98l16.012 27.732C48.359 25.263 55 4.031 55 4.031z"
+  fill="#f26161"></path>
+  <path data-name="layer1" d="M37.267 60.97a1 1 0 0 1-.867-.5L8.134 11.511a1 1 0 0 1 1.732-1L38.132 59.47a1 1 0 0 1-.865 1.5z"
+  fill="#7b8baf"></path>
+</svg>

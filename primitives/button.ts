@@ -16,6 +16,10 @@ export const Button = styled.button`
     cursor: pointer;
     background-color: var(--primary-alt-color);
   }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const ButtonAnchor = styled.a`

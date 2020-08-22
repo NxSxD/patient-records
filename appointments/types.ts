@@ -4,8 +4,8 @@ export interface AppointmentLocation {
 }
 
 export interface Appointment {
-  id: string;
-  appointment_time: string;
+  id?: string;
   doctor: string;
+  appointment_time: string;
   location: AppointmentLocation;
 }

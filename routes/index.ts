@@ -7,13 +7,13 @@ export interface Route {
 
 export const ROUTES: Route[] = [
   {
-    id: "my_appointments",
+    id: "appointments",
     displayName: "My Appointments",
-    route: "/my-appointments",
+    route: "/appointments",
   },
   {
-    id: "my_medications",
+    id: "medications",
     displayName: "My Medications",
-    route: "/my-medications",
+    route: "/medications",
   },
 ];

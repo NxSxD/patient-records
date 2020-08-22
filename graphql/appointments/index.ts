@@ -1,3 +1,3 @@
 export * from "./types";
-export { resolvers as appointmentResolvers } from "./resolvers";
+export { queries as appointmentQueries, mutations as appointmentMutations } from "./resolvers";
 export { typeDefs as appointmentTypeDefs } from "./typeDefs";
