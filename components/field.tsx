@@ -9,14 +9,30 @@ interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export const Field: React.FC<FieldProps> = ({ label, ...props }) => {
   const [field, meta] = useField(props.name);
-
   return (
     <FieldContainer>
       <Label>{label}</Label>
-      <Input {...field} {...props}  value={field.value} onChange={field.onChange} />
+      <Input
+        {...field}
+        {...props}
+        value={field.value}
+        onChange={field.onChange}
+      />
       {meta.touched && meta.error ? (
         <FieldError>{meta.error}</FieldError>
       ) : null}
     </FieldContainer>
+  );
+};
+
+export const SimpleField: React.FC<FieldProps> = (props) => {
+  const [field, meta] = useField(props.name);
+  return (
+    <Input
+      {...field}
+      {...props}
+      value={field.value}
+      onChange={field.onChange}
+    />
   );
 };

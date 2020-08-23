@@ -1,0 +1,23 @@
+[
+  {
+    "id": "01-23",
+    "name": "Omeprazole",
+    "dosage": "1 Tablet",
+    "frequency": "1/day",
+    "cost": 5.25
+  },
+  {
+    "id": "98-45",
+    "name": "Lipitor",
+    "dosage": "2 Tablets",
+    "frequency": "4/day",
+    "cost": 6.36
+  },
+  {
+    "id": "35-76",
+    "name": "Lipitor",
+    "dosage": "2 Tablets",
+    "frequency": "4/day",
+    "cost": 7.49
+  }
+]

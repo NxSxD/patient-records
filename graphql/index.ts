@@ -1,39 +1,56 @@
+import { userQueries, userMutations, userTypeDefs } from "./users";
 import {
   appointmentQueries,
   appointmentMutations,
   appointmentTypeDefs,
 } from "./appointments";
-import { userQueries, userMutations, userTypeDefs } from "./users";
+import {
+  medicationTypeDefs,
+  medicationQueries,
+  medicationMutations,
+} from "./medications";
 import { gql, makeExecutableSchema } from "apollo-server-micro";
 
 const resolvers = {
   Query: {
-    ...appointmentQueries,
     ...userQueries,
+    ...appointmentQueries,
+    ...medicationQueries,
   },
   Mutation: {
     ...userMutations,
     ...appointmentMutations,
+    ...medicationMutations,
   },
 };
 
 const rootTypeDef = gql`
   type Query {
-    appointments(
-      limit: Int
-      orderBy: String
-    ): [Appointment!]
-    appointment(id: ID!): Appointment
+    # Users
     users: [User!]!
+    # Appointments
+    appointments(limit: Int, orderBy: String): [Appointment!]
+    appointment(id: ID!): Appointment
+    # Medications
+    medications: [Medication!]!
   }
 
   type Mutation {
+    # Users
     login(credentials: Credentials): AuthPayload
-    addAppointment(appointment: NewAppointmentPayload): Appointment
+    # Appointments
+    addAppointment(appointment: NewAppointmentPayload): Appointment!
+    # Medications
+    updateMedication(medication: UpdateMedicationPayload): Medication!
   }
 `;
 
 export const schema = makeExecutableSchema({
-  typeDefs: [rootTypeDef, appointmentTypeDefs, userTypeDefs],
+  typeDefs: [
+    rootTypeDef,
+    appointmentTypeDefs,
+    medicationTypeDefs,
+    userTypeDefs,
+  ],
   resolvers,
 });
