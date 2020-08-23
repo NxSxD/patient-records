@@ -38,8 +38,10 @@ const MessageContainer = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 `;
 
 const OptionsContainer = styled.div`
@@ -47,7 +49,8 @@ const OptionsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 1rem;
   & > span {
     margin: 0 2rem;
   }
@@ -56,5 +59,6 @@ const OptionsContainer = styled.div`
 const OR = styled.span`
   content: "Or";
   font-size: 1.2rem;
+  line-height: 45px;
   color: var(--primary-color);
 `;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   height: 45px;
-  min-width: 120px;
   padding: 0 1rem;
   font-size: 1.2rem;
   border: none;
@@ -24,7 +23,6 @@ export const Button = styled.button`
 
 export const ButtonAnchor = styled.a`
   height: 45px;
-  min-width: 120px;
   padding: 0 1rem;
   font-size: 1.2rem;
   border: none;
@@ -41,11 +39,13 @@ export const ButtonAnchor = styled.a`
 `;
 
 export const ButtonPrimary = styled(Button)`
+  min-width: 120px;
   background-color: var(--primary-color);
   color: #fff;
 `;
 
 export const ButtonLink = styled(ButtonAnchor)`
+  min-width: 120px;
   background-color: var(--primary-color);
   color: #fff;
 `;
