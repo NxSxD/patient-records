@@ -13,11 +13,11 @@ import {
   AppointmentMap,
 } from "../../appointments";
 import dayjs from "dayjs";
+import useSWR from 'swr';
 
 const AppointmentDetail = () => {
   const router = useRouter();
   const appointmentID = router.query.id;
-  console.log("AppointmentID: ", appointmentID);
 
   const { data, loading } = useQuery<
     GetAppointmentData,
@@ -28,14 +28,10 @@ const AppointmentDetail = () => {
     },
   });
 
-  console.log("Data: ", data);
-
   const center = {
     lat: data?.appointment?.location.lat || 0,
     lng: data?.appointment?.location.lng || 0,
   };
-
-  console.log("Center: ", center);
 
   return (
     <>

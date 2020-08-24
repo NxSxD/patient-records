@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org/docs) application built by Steven Duque f
 
 ## Running the application locally
 
+Create a `.env.local` containing the following environment variables:
+```
+APP_SECRET=some_app_secret_here
+MAPS_API_KEY='maps-api-key-here'
+```
+
 Running the development server:
 ```bash
 npm run dev
