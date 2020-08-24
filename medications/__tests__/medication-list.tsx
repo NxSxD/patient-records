@@ -40,10 +40,7 @@ describe("Medication List Item", () => {
   it("should render according to snapshot", () => {
     const { container } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
-            <MedicationsList
-              medications={medications}
-              onItemUpdate={onUpdate}
-            />
+        <MedicationsList medications={medications} onItemUpdate={onUpdate} />
       </MockedProvider>
     );
 
@@ -53,10 +50,7 @@ describe("Medication List Item", () => {
   it("should invoke onUpdate", async () => {
     const { getByText, getByLabelText, getAllByText } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MedicationsList
-          medications={medications}
-          onItemUpdate={onUpdate}
-        />
+        <MedicationsList medications={medications} onItemUpdate={onUpdate} />
       </MockedProvider>
     );
 
