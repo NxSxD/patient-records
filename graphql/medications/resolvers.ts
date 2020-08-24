@@ -13,8 +13,6 @@ const updateMedication = (
   context,
   info
 ) => {
-  console.log("Args: ", args);
-
   const index = medications.findIndex((m) => m.id == args.medication.id);
 
   medications[index] = args.medication;

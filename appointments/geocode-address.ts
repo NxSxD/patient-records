@@ -1,4 +1,5 @@
 import { AppointmentLocation } from "./types";
+import { getAPIKey } from "./key";
 
 export async function geocodeAddress(
   address: string
@@ -6,11 +7,18 @@ export async function geocodeAddress(
   let location;
 
   try {
+    let mapsAPIKey;
+    const keyResponse = await getAPIKey();
+    if(keyResponse.headers.get("Content-Type").includes("application/json")) {
+      const { key } = await keyResponse.json();
+      if(key) mapsAPIKey = key;
+    }
+
     const geocodingURL = new URL(
       "https://maps.googleapis.com/maps/api/geocode/json"
     );
     const params = {
-      key: "AIzaSyDWO-NcYK0BFVe4MfRZ1iDumC8Q535jANo",
+      key: mapsAPIKey,
       address,
     };
 
