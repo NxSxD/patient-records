@@ -1,6 +1,8 @@
 import { AppointmentLocation } from "./types";
 
-export async function geocodeAddress(address: string): Promise<AppointmentLocation | null>{
+export async function geocodeAddress(
+  address: string
+): Promise<AppointmentLocation | null> {
   let location;
 
   try {

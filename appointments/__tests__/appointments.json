@@ -1,0 +1,29 @@
+[
+  {
+    "id": "0",
+    "appointment_time": "2020-08-20T17:30:00-0400",
+    "doctor": "Docror 1",
+    "location": {
+      "lat": 28.0715134,
+      "lng": -82.4274403
+    }
+  },
+  {
+    "id": "1",
+    "appointment_time": "2020-08-21T17:30:00-0400",
+    "doctor": "Doctor 2",
+    "location": {
+      "lat": 28.0715134,
+      "lng": -82.4274403
+    }
+  },
+  {
+    "id": "2",
+    "appointment_time": "2020-08-22T17:30:00-0400",
+    "doctor": "Doctor 3",
+    "location": {
+      "lat": 27.8931472,
+      "lng": -82.2778834
+    }
+  }
+]

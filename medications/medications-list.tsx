@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Medication } from "./types";
-import {
-  ListHeader,
-  Empty,
-  ListContainer,
-} from "../primitives";
+import { ListHeader, Empty, ListContainer } from "../primitives";
 import Link from "next/link";
 import { MedicationListItem } from "./medication-list-item";
 
@@ -16,24 +12,26 @@ interface MedicationListProps {
 
 export const MedicationsList: React.FC<MedicationListProps> = ({
   medications,
-  onItemUpdate
+  onItemUpdate,
 }) => {
-
   const onUpdate = (med: Medication) => {
     onItemUpdate(med);
-  }
+  };
 
   return (
     <ListContainer>
       <ListHeader>My Medications</ListHeader>
       {medications?.length > 0 ? (
         medications.map((med) => (
-          <MedicationListItem key={med.id}  medication={med} onItemUpdate={onUpdate}/>
+          <MedicationListItem
+            key={med.id}
+            medication={med}
+            onItemUpdate={onUpdate}
+          />
         ))
       ) : (
-        <Empty>Seems like you don't have any medications yet.</Empty>
+        <Empty>Seems like you don&apos;t have any medications yet.</Empty>
       )}
     </ListContainer>
   );
 };
-

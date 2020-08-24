@@ -13,13 +13,16 @@ import { Field } from "../components";
 import { Appointment } from "./types";
 import dayjs from "dayjs";
 import { geocodeAddress } from "./geocode-address";
-import { ADD_APPOINTMENT, AddAppointmentData, AddAppointmentVariables } from "./queries";
+import {
+  ADD_APPOINTMENT,
+  AddAppointmentData,
+  AddAppointmentVariables,
+} from "./queries";
 import { useMutation } from "@apollo/react-hooks";
 
-interface AddAppointmentModalProps
-  extends React.RefAttributes<HTMLDivElement> {
-    onAppointmentAdded: (data: Appointment) => void;
-  }
+interface AddAppointmentModalProps extends React.RefAttributes<HTMLDivElement> {
+  onAppointmentAdded: (data: Appointment) => void;
+}
 
 interface FormValues {
   doctor: string;
@@ -31,7 +34,7 @@ interface FormValues {
 export const AddAppointmentModal = React.forwardRef<
   HTMLDivElement,
   AddAppointmentModalProps
->(({ onAppointmentAdded }, ref) => {
+>(function addAppointmentModal({ onAppointmentAdded }, ref) {
   const values: FormValues = {
     doctor: "",
     date: "",
@@ -39,19 +42,20 @@ export const AddAppointmentModal = React.forwardRef<
     location: "",
   };
 
-  const [addAppointment, { data, loading }] = useMutation<AddAppointmentData, AddAppointmentVariables>(ADD_APPOINTMENT);
+  const [addAppointment, { data, loading }] = useMutation<
+    AddAppointmentData,
+    AddAppointmentVariables
+  >(ADD_APPOINTMENT);
 
   useEffect(() => {
-    if(!data || !data.addAppointment) return;
-    if(data.addAppointment.id) onAppointmentAdded(data.addAppointment);
+    if (!data || !data.addAppointment) return;
+    if (data.addAppointment.id) onAppointmentAdded(data.addAppointment);
   }, [data]);
 
   const onSubmit = async (
     values: FormValues,
     helpers: FormikHelpers<FormValues>
   ) => {
-    console.log(values);
-
     if (!values.doctor) {
       helpers.setErrors({ doctor: "Doctor's name is required." });
       return;
@@ -67,27 +71,32 @@ export const AddAppointmentModal = React.forwardRef<
       return;
     }
 
+    if (!values.location) {
+      helpers.setErrors({ location: "Appointment location is required." });
+      return;
+    }
+
     const appointmentLocation = await geocodeAddress(values.location);
-    if(!appointmentLocation) {
+    if (!appointmentLocation) {
       helpers.setErrors({ location: "Invalid address provided." });
       return;
     }
 
     const [hour, minute] = values.time.split(":");
     const appointment_time = dayjs(values.date)
-    .hour(parseInt(hour))
-    .minute(parseInt(minute))
-    .toISOString();
+      .hour(parseInt(hour))
+      .minute(parseInt(minute))
+      .toISOString();
     const appointment: Appointment = {
       doctor: values.doctor,
       appointment_time,
-      location: appointmentLocation
+      location: appointmentLocation,
     };
 
     addAppointment({
       variables: {
-        appointment
-      }
+        appointment,
+      },
     });
 
     helpers.setSubmitting(false);
@@ -96,7 +105,7 @@ export const AddAppointmentModal = React.forwardRef<
   return (
     <PageMask>
       <ModalCard ref={ref}>
-        <ModalHeader>Add Appointment</ModalHeader>
+        <ModalHeader>New Appointment</ModalHeader>
         <FormContainer>
           <Formik initialValues={values} onSubmit={onSubmit}>
             {({ handleSubmit, isSubmitting }) => (
@@ -106,7 +115,11 @@ export const AddAppointmentModal = React.forwardRef<
                 <Field label="Time" name="time" type="time" />
                 <Field label="Location" name="location" type="text" />
                 <ButtonPrimary type="submit" disabled={isSubmitting || loading}>
-                  {isSubmitting ? <Spinner /> : "Add Appointment"}
+                  {isSubmitting ? (
+                    <Spinner aria-label="Loading..." />
+                  ) : (
+                    "Add Appointment"
+                  )}
                 </ButtonPrimary>
               </Form>
             )}

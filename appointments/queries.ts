@@ -5,15 +5,12 @@ import { Appointment } from "./types";
 export interface GetAppointmentsVariables {}
 
 export interface GetAppointmentsData {
-  appointments: Appointment[]
+  appointments: Appointment[];
 }
 
 export const GET_APPOINTMENTS = gql`
   query getAppointments {
-    appointments(
-      limit: 3,
-      orderBy: "appointment_time"
-    ) {
+    appointments(limit: 3, orderBy: "appointment_time") {
       id
       doctor
       appointment_time
@@ -48,7 +45,7 @@ export const GET_APPOINTMENT = gql`
 
 // Add Appointment
 export interface AddAppointmentVariables {
-  appointment: Omit<Appointment, 'id'>;
+  appointment: Omit<Appointment, "id">;
 }
 
 export interface AddAppointmentData {

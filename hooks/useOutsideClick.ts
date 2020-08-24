@@ -16,8 +16,8 @@ export function useOutsideClick<T extends HTMLElement>(
   );
 
   useEffect(() => {
-    if(!ref.current) return;
-    
+    if (!ref.current) return;
+
     document.addEventListener("click", targetGate);
     return () => document.removeEventListener("click", targetGate);
   }, [ref, targetGate]);

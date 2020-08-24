@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const WidthContainer = styled.div`
@@ -17,7 +18,7 @@ const Container = styled.div`
   align-items: center;
 `;
 
-export const PageContainer: React.FC<{}> = ({ children }) => (
+export const PageContainer: React.FC = ({ children }) => (
   <Container>
     <WidthContainer>{children}</WidthContainer>
   </Container>

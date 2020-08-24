@@ -25,7 +25,7 @@ const getAppointments = (
     );
   }
 
-  if(typeof args.limit === "number") {
+  if (typeof args.limit === "number") {
     data = data.slice(0, args.limit);
   }
 

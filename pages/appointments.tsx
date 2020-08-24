@@ -18,16 +18,16 @@ interface MyAppointmentProps {}
 const MyAppointments: React.FC<MyAppointmentProps> = (props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
-  const { data, refetch } = useQuery<GetAppointmentsData, GetAppointmentsVariables>(
-    GET_APPOINTMENTS,
-    {
-      fetchPolicy: 'cache-and-network' 
-    }
-  );
+  const { data, refetch } = useQuery<
+    GetAppointmentsData,
+    GetAppointmentsVariables
+  >(GET_APPOINTMENTS, {
+    fetchPolicy: "cache-and-network",
+  });
 
   const onOutsideClick: EventListener = (ev: MouseEvent) => {
     setShowModal(false);
-  }
+  };
 
   useOutsideClick<HTMLDivElement>(ref, onOutsideClick);
 
@@ -38,15 +38,21 @@ const MyAppointments: React.FC<MyAppointmentProps> = (props) => {
   const onAppointmentAdded = (_: Appointment) => {
     refetch();
     setShowModal(false);
-  }
+  };
 
   return (
     <>
       <NavigationBar />
       <PageContainer>
-        <AppointmentList appointments={data?.appointments} onAddAppointment={onAddAppointmentClick}/>
+        <AppointmentList
+          appointments={data?.appointments}
+          onAddAppointment={onAddAppointmentClick}
+        />
         {showModal && (
-          <AddAppointmentModal ref={ref} onAppointmentAdded={onAppointmentAdded} />
+          <AddAppointmentModal
+            ref={ref}
+            onAppointmentAdded={onAppointmentAdded}
+          />
         )}
       </PageContainer>
     </>

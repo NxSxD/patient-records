@@ -17,15 +17,16 @@ export const Field: React.FC<FieldProps> = ({ label, ...props }) => {
         {...props}
         value={field.value}
         onChange={field.onChange}
+        aria-label={`${label}-input`}
       />
       {meta.touched && meta.error ? (
-        <FieldError>{meta.error}</FieldError>
+        <FieldError role="alert">{meta.error}</FieldError>
       ) : null}
     </FieldContainer>
   );
 };
 
-export const SimpleField: React.FC<FieldProps> = (props) => {
+export const SimpleField: React.FC<FieldProps> = ({ label, ...props }) => {
   const [field, meta] = useField(props.name);
   return (
     <Input
@@ -33,6 +34,7 @@ export const SimpleField: React.FC<FieldProps> = (props) => {
       {...props}
       value={field.value}
       onChange={field.onChange}
+      aria-label={`${label}-input`}
     />
   );
 };

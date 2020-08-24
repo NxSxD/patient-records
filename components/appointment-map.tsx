@@ -4,10 +4,10 @@ import GoogleMapReact from "google-map-react";
 
 interface MapProps {
   center: {
-    lat?: number;
-    lng?: number;
+    lat: number;
+    lng: number;
   };
-  zoom?: number;
+  zoom: number;
 }
 
 export const AppointmentMap: React.FC<MapProps> = ({
@@ -32,7 +32,7 @@ const MapContainer = styled.div`
   height: 100%;
   width: 100%;
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     max-width: 1200px;
   }
 `;
