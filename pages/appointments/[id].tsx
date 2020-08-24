@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { withApollo } from "../../apollo";
-import { NavigationBar, AppointmentMap } from "../../components";
+import { NavigationBar } from "../../components";
 import { PageContainer } from "../../primitives";
 import { useRouter } from "next/router";
 import { useQuery } from "@apollo/react-hooks";
@@ -10,6 +10,7 @@ import {
   GetAppointmentVariables,
   GET_APPOINTMENT,
   Marker,
+  AppointmentMap,
 } from "../../appointments";
 import dayjs from "dayjs";
 

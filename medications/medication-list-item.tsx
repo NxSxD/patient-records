@@ -96,19 +96,19 @@ export const MedicationListItem: React.FC<MedicationListItemProps> = ({
           <MedicationListContainer isEditting={isEditting}>
             <ItemInfo>
               <InfoLabel>Medication</InfoLabel>
-              <SimpleField name="name" type="text" />
+              <SimpleField label="Name" name="name" type="text" />
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Dosage</InfoLabel>
-              <SimpleField name="dosage" type="text" />
+              <SimpleField label="Dosage" name="dosage" type="text" />
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Frequency</InfoLabel>
-              <SimpleField name="frequency" type="text" />
+              <SimpleField label="Frequency" name="frequency" type="text" />
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Cost</InfoLabel>
-              <SimpleField name="cost" type="number" />
+              <SimpleField label="Cost" name="cost" type="number" />
             </ItemInfo>
             <ItemActions>
               <EditButton type="submit">Save</EditButton>

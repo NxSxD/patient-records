@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0",
+    "name": "Medication 1",
+    "dosage": "1 Tablet",
+    "frequency": "1/day",
+    "cost": 5.00
+  },
+  {
+    "id": "1",
+    "name": "Medication 2",
+    "dosage": "2 Tablets",
+    "frequency": "1/week",
+    "cost": 10.00
+  },
+  {
+    "id": "2",
+    "name": "Medication 3",
+    "dosage": "3 Tablets",
+    "frequency": "12/year",
+    "cost": 15.00
+  }
+]
