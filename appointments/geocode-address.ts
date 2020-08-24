@@ -9,9 +9,9 @@ export async function geocodeAddress(
   try {
     let mapsAPIKey;
     const keyResponse = await getAPIKey();
-    if(keyResponse.headers.get("Content-Type").includes("application/json")) {
+    if (keyResponse.headers.get("Content-Type").includes("application/json")) {
       const { key } = await keyResponse.json();
-      if(key) mapsAPIKey = key;
+      if (key) mapsAPIKey = key;
     }
 
     const geocodingURL = new URL(

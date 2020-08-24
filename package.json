@@ -16,7 +16,6 @@
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
     "apollo-server-micro": "^2.16.1",
-    "dataloader": "^2.0.0",
     "dayjs": "^1.8.34",
     "formik": "^2.1.5",
     "google-map-react": "^2.0.8",
@@ -29,7 +28,6 @@
     "react-dom": "16.13.1",
     "recharts": "^1.8.5",
     "styled-components": "^5.1.1",
-    "swr": "^0.3.1",
     "uuid": "^8.3.0"
   },
   "devDependencies": {

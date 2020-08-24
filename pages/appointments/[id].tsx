@@ -13,7 +13,7 @@ import {
   AppointmentMap,
 } from "../../appointments";
 import dayjs from "dayjs";
-import useSWR from 'swr';
+import useSWR from "swr";
 
 const AppointmentDetail = () => {
   const router = useRouter();

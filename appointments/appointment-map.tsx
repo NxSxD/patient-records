@@ -23,14 +23,16 @@ export const AppointmentMap: React.FC<MapProps> = ({
     const getKey = async () => {
       try {
         const keyResponse = await getAPIKey();
-        if(keyResponse.headers.get("Content-Type").includes("application/json")) {
+        if (
+          keyResponse.headers.get("Content-Type").includes("application/json")
+        ) {
           const { key } = await keyResponse.json();
-          if(key) {
+          if (key) {
             console.log("Key : ", key);
             setMapsAPIKey(key);
-          };
+          }
         }
-      } catch(e) {
+      } catch (e) {
         console.log(e);
       }
     };
