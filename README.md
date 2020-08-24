@@ -1,9 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/docs) application built by Steven Duque for a technical screening. 
 
-## Getting Started
+## Running the application locally
 
-First, run the development server:
-
+Running the development server:
 ```bash
 npm run dev
 # or
@@ -12,22 +11,37 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## About
 
-## Learn More
+### Some of the technologies used:
+- [Typescript](https://www.typescriptlang.org/)
+- GraphQL
+- React hooks
+- [Styled components](https://styled-components.com/)
+- [@testing-library/react](https://testing-library.com/docs/react-testing-library/intro)
+- [Prettier](https://prettier.io/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Structure
+- `pages`
+-- Contains components that NextJS will render to page
+- `pages/api`
+-- Contains api handlers - i.e., /api/graphql
+- `appointments`
+-- Contains components related to appointments UI
+- `medications`
+-- Contains components related to medications UI
+- `primitives`
+-- Contains primitive styled html components to be shared throughout UI
+- `components`
+-- Contains shared components
+- `routes`
+-- Contains exported ROUTES constant to be shared throughout app
+- `hooks`
+-- Contains hooks to be shared throughout the app
+- `graphql`
+-- Contains all graphql related schema code
+- `apollo`
+-- Contains apollo config and HOC helpers for NextJS
 
 ## Notes for review / improvements
 - Could have used `getServerSideProps` for server side rendering - and not using apollo client on the FE
