@@ -100,15 +100,15 @@ export const MedicationListItem: React.FC<MedicationListItemProps> = ({
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Dosage</InfoLabel>
-              <SimpleField label="Dosage" name="dosage" type="text" />
+              <ShortField label="Dosage" name="dosage" type="text" />
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Frequency</InfoLabel>
-              <SimpleField label="Frequency" name="frequency" type="text" />
+              <ShortField label="Frequency" name="frequency" type="text" />
             </ItemInfo>
             <ItemInfo>
               <InfoLabel>Cost</InfoLabel>
-              <SimpleField label="Cost" name="cost" type="number" />
+              <ShortField label="Cost" name="cost" type="number" />
             </ItemInfo>
             <ItemActions>
               <EditButton type="submit">Save</EditButton>
@@ -127,12 +127,17 @@ const MedicationListContainer = styled(ListItemContainer)<{
     return (
       props.isEditting &&
       css`
-        ${ItemInfo}::not(::last-of-type) {
-          padding-right: 1rem;
+        height: 95px;
+        ${ItemInfo} {
+          margin-right: 1rem;
         }
       `
     );
   }}
+`;
+
+const ShortField = styled(SimpleField)`
+  max-width: 120px;
 `;
 
 const EditButton = styled(ButtonPrimary)`

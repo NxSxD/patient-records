@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ROUTES } from "../routes";
-import { ButtonLink, PageContainer } from "../primitives";
+import { ButtonLink } from "../primitives";
 import Link from "next/link";
 
 const myAppointments = ROUTES.find((r) => r.id == "appointments");

@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
-import { LOGIN } from "./queries";
 import decode from "jwt-decode";
 import { User } from "./types";
 

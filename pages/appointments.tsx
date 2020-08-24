@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { NavigationBar } from "../components";
 import { PageContainer } from "../primitives";
 import { withApollo } from "../apollo";

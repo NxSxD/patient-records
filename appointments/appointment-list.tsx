@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Appointment } from "./types";
 import dayjs from "dayjs";

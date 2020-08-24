@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Medication } from "./types";
 import { ListHeader, Empty, ListContainer } from "../primitives";
-import Link from "next/link";
 import { MedicationListItem } from "./medication-list-item";
 
 interface MedicationListProps {
