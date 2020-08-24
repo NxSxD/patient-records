@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { withApollo } from "../apollo";
-import { Formik, FormikHelpers, Form } from "formik";
+import { Formik, FormikHelpers } from "formik";
 import { Field } from "../components";
-import { ButtonPrimary, Spinner, Mask } from "../primitives";
-import { LOGIN } from "../login/queries";
+import { ButtonPrimary, Spinner, Mask, Form } from "../primitives";
+import { LOGIN } from "../users/queries";
 import { useMutation } from "@apollo/react-hooks";
-import { LoginVariables, AuthResponse } from "../login";
+import { LoginVariables, AuthResponse, useAuth } from "../users";
 import { useRouter } from "next/router";
 
 interface AuthProps {}
@@ -18,6 +18,8 @@ interface Values {
 
 function IndexPage(props: AuthProps) {
   const router = useRouter();
+  const { setAuth } = useAuth();
+
   const [login, { data, loading }] = useMutation<AuthResponse, LoginVariables>(
     LOGIN
   );
@@ -40,7 +42,7 @@ function IndexPage(props: AuthProps) {
     if (!data) return;
 
     const { token } = data.login;
-    localStorage.setItem("auth_token", token);
+    setAuth(token);
 
     router.push("/welcome");
   }, [data]);

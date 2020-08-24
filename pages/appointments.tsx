@@ -12,6 +12,7 @@ import {
 } from "../appointments";
 import { AddAppointmentModal } from "../appointments/add-appointment-modal";
 import { useOutsideClick } from "../hooks";
+import { ProtectRoute } from "../routes";
 
 interface MyAppointmentProps {}
 
@@ -59,4 +60,4 @@ const MyAppointments: React.FC<MyAppointmentProps> = (props) => {
   );
 };
 
-export default withApollo({ ssr: true })(MyAppointments);
+export default ProtectRoute(withApollo({ ssr: true })(MyAppointments));

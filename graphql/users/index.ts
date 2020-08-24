@@ -4,3 +4,4 @@ export {
   mutations as userMutations,
 } from "./resolvers";
 export { typeDefs as userTypeDefs } from "./typeDefs";
+export * from "./getUser";

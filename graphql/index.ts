@@ -54,3 +54,5 @@ export const schema = makeExecutableSchema({
   ],
   resolvers,
 });
+
+export { getUser } from "./users";

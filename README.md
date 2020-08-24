@@ -36,12 +36,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 -- Contains components related to appointments UI
 - `medications`
 -- Contains components related to medications UI
+- `users`
+-- Contains user/auth related queries and context provider
 - `primitives`
 -- Contains primitive styled html components to be shared throughout UI
 - `components`
 -- Contains shared components
 - `routes`
--- Contains exported ROUTES constant to be shared throughout app
+-- Contains exported ROUTES and protected route HOC
 - `hooks`
 -- Contains hooks to be shared throughout the app
 - `graphql`

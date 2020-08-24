@@ -1,3 +1,5 @@
+export * from "./protected-route";
+
 export interface Route {
   id: string;
   displayName: string;

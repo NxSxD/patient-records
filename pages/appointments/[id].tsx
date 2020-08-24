@@ -13,7 +13,7 @@ import {
   AppointmentMap,
 } from "../../appointments";
 import dayjs from "dayjs";
-import useSWR from "swr";
+import { ProtectRoute } from "../../routes";
 
 const AppointmentDetail = () => {
   const router = useRouter();
@@ -86,4 +86,4 @@ const InfoValue = styled.span`
   color: var(--text);
 `;
 
-export default withApollo({ ssr: true })(AppointmentDetail);
+export default ProtectRoute(withApollo({ ssr: true })(AppointmentDetail));
