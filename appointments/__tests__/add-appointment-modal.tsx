@@ -3,7 +3,6 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { AddAppointmentModal } from "../add-appointment-modal";
 import { ADD_APPOINTMENT } from "../queries";
 import { Appointment } from "../types";
-// @ts-ignore
 import { MockedProvider } from "@apollo/client/testing";
 import { geocodeAddress } from "../geocode-address";
 
