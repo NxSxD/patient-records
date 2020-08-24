@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { ROUTES } from "../routes";
-import { PageContainer, WidthContainer } from "../primitives";
+import { WidthContainer } from "../primitives";
 
 interface NavigationBarProps {
   title?: string;

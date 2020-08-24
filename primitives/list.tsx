@@ -34,6 +34,7 @@ export const Empty = styled.span`
 
 export const InfoLabel = styled.span`
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
   color: var(--text-label-color);
 `;
 
@@ -41,7 +42,7 @@ export const ItemInfo = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
 `;
 

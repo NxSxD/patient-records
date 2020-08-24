@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-// Patent Records typeDefs
+// Appointments typeDefs
 export const typeDefs = gql`
   # AppointmentLocation defines geolcation
   # data for a patient's appointment

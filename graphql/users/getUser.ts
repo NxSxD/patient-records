@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-// import usersJson from "./users.json";
 
 export function getUser(token: string) {
   let user;

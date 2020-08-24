@@ -6,10 +6,8 @@ import dayjs from "dayjs";
 const appointments: Appointment[] = appointmentsJson;
 
 const getAppointments = (
-  parent: null,
-  args: { limit?: number; orderBy?: string } = {},
-  context,
-  info
+  _: null,
+  args: { limit?: number; orderBy?: string } = {}
 ): Appointment[] => {
   let data = appointments;
 
@@ -32,15 +30,13 @@ const getAppointments = (
   return data;
 };
 
-const getAppointment = (parent: null, args: { id: string }, context, info) => {
+const getAppointment = (_: null, args: { id: string }) => {
   return appointments.find((ap) => ap.id == args.id);
 };
 
 async function addAppointment(
-  parent: null,
-  args: { appointment: Appointment },
-  context,
-  info
+  _: null,
+  args: { appointment: Appointment }
 ): Promise<Appointment> {
   const { appointment: payload } = args;
 

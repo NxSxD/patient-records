@@ -7,12 +7,7 @@ const getMedications = () => {
   return medications;
 };
 
-const updateMedication = (
-  parent: null,
-  args: { medication: Medication },
-  context,
-  info
-) => {
+const updateMedication = (_: null, args: { medication: Medication }) => {
   const index = medications.findIndex((m) => m.id == args.medication.id);
 
   medications[index] = args.medication;

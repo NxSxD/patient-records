@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-micro";
 
-// User typeDefs
+// Medications typeDefs
 export const typeDefs = gql`
   input UpdateMedicationPayload {
     id: ID!

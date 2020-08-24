@@ -36,6 +36,7 @@ exports[`Medication List Item should render according to snapshot 1`] = `
 
 .c4 {
   font-size: 0.9rem;
+  margin-bottom: 0.5rem;
   color: var(--text-label-color);
 }
 
@@ -50,10 +51,10 @@ exports[`Medication List Item should render according to snapshot 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;

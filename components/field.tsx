@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { useField } from "formik";
 import { FieldContainer, Label, Input, FieldError } from "../primitives";
 
@@ -27,7 +26,7 @@ export const Field: React.FC<FieldProps> = ({ label, ...props }) => {
 };
 
 export const SimpleField: React.FC<FieldProps> = ({ label, ...props }) => {
-  const [field, meta] = useField(props.name);
+  const [field] = useField(props.name);
   return (
     <Input
       {...field}
