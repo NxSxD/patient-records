@@ -32,7 +32,7 @@ export const AppointmentList: React.FC<AppointmentListProps> = ({
     <ListContainer>
       <ListHeader>
         <span>Last 3 appointments</span>
-        <ButtonPrimary onClick={onAdd}>+ Appointment</ButtonPrimary>
+        <ButtonPrimary onClick={onAdd}>&#43; Appointment</ButtonPrimary>
       </ListHeader>
       {appointments?.length > 0 ? (
         appointments.map((ap) => (
@@ -52,7 +52,7 @@ export const AppointmentList: React.FC<AppointmentListProps> = ({
           </Link>
         ))
       ) : (
-        <Empty>Seems like you don't have any appointments yet.</Empty>
+        <Empty>Seems like you don&apos;t have any appointments yet.</Empty>
       )}
     </ListContainer>
   );

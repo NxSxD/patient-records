@@ -83,7 +83,9 @@ interface withApolloOptions {
   ssr?: boolean;
 }
 
-export const withApollo = ({ ssr = false }: withApolloOptions = {}) => (PageComponent) => {
+export const withApollo = ({ ssr = false }: withApolloOptions = {}) => (
+  PageComponent
+) => {
   const WithApollo = ({ apolloClient, apolloState, ...pageProps }) => {
     let client;
     if (apolloClient) {

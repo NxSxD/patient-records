@@ -1,3 +1,4 @@
+import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { GetServerSideProps } from "next";
 import { ServerStyleSheet } from "styled-components";

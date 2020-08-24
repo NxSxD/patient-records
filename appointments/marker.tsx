@@ -41,6 +41,6 @@ export const Marker: React.FC<MarkerProps> = (_) => {
 };
 
 const SVG = styled.svg`
-    position: absolute;
-    transform: translate(-50%, -100%);
+  position: absolute;
+  transform: translate(-50%, -100%);
 `;

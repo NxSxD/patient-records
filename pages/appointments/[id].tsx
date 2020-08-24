@@ -36,7 +36,6 @@ const AppointmentDetail = () => {
 
   console.log("Center: ", center);
 
-  
   return (
     <>
       <NavigationBar />

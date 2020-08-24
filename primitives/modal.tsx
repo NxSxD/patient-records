@@ -15,7 +15,7 @@ export const ModalCard = styled.div`
   max-width: 800px;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const ModalHeader = styled.div`
   height: 45px;

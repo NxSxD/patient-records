@@ -5,4 +5,3 @@ export interface Medication {
   frequency: string;
   cost: number;
 }
-

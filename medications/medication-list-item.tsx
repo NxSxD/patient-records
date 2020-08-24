@@ -22,8 +22,7 @@ interface MedicationListItemProps {
   onItemUpdate: (med: Medication) => void;
 }
 
-interface EditValues
-  extends Pick<Medication, "name" | "dosage" | "frequency" | "cost"> {}
+type EditValues = Pick<Medication, "name" | "dosage" | "frequency" | "cost">;
 
 export const MedicationListItem: React.FC<MedicationListItemProps> = ({
   medication,
