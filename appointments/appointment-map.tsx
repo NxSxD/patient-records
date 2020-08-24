@@ -28,7 +28,6 @@ export const AppointmentMap: React.FC<MapProps> = ({
         ) {
           const { key } = await keyResponse.json();
           if (key) {
-            console.log("Key : ", key);
             setMapsAPIKey(key);
           }
         }

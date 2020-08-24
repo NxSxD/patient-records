@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NavigationBar, WelcomeDisplay } from "../components";
 import { PageContainer } from "../primitives";
+import { ProtectRoute } from "../routes";
 
 interface WelcomeProps {}
 
@@ -16,4 +17,4 @@ function WelcomePage(props: WelcomeProps) {
   );
 }
 
-export default WelcomePage;
+export default ProtectRoute(WelcomePage);

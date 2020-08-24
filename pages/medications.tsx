@@ -12,6 +12,7 @@ import {
   Medication,
 } from "../medications";
 import dynamic from "next/dynamic";
+import { ProtectRoute } from "../routes";
 
 // components/MyChart.js contains the recharts chart
 const MedicationCostChart = dynamic(
@@ -65,4 +66,4 @@ const AnalysisRow = styled.div`
   padding: 2rem 0;
 `;
 
-export default withApollo({ ssr: true })(MyAppointments);
+export default ProtectRoute(withApollo({ ssr: true })(MyAppointments));
